@@ -11,7 +11,7 @@ const Hero = () => {
   };
   return (
     <div className='text-black' id='principal'>
-      <div className='max-w-[800px]  mt-[-200px] w-auto h-screen mx-auto text-center flex flex-col justify-center'>
+      <div className='max-w-[800px]  mt-[-0px] w-auto h-screen mx-auto text-center flex flex-col justify-center'>
         <p className='text-[#ffbf00] font-bold'>Expertos en accidentes de tráfico y reclamaciones legales.</p>
         <h2 className='md:text-6xl sm:text-5xl text-4xl font-sans font-bold my-2'>Compensación justa para tus reclamaciones.</h2>
         <p className='font-serif italic my-2'>Protege tus derechos y brinda tranquilidad en momentos de urgencia.</p>
