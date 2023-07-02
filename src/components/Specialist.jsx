@@ -10,9 +10,16 @@ const Specialist = () => {
         <h1 className="text-[#ffbf00] font-bold md:text-4xl sm:text-3xl text-2xl py-2">
           Nuestro Compromiso Legal: Ética, Experiencia, Resultados
         </h1>
-        <p className='text-black'>
-          Somos una firma legal comprometida con la ética, respaldada por una amplia experiencia y un historial exitoso. Nos enfocamos en soluciones personalizadas para cada caso, brindando asesoramiento claro y efectivo. Confía en nosotros para representarte con integridad y obtener los resultados que necesitas.
-        </p>
+            <p className='text-black'>Somos una firma legal que:</p>
+              <ul className='list-disc pl-5 text-black'>
+                <li>Se compromete con la ética en cada acción y decisión</li>
+                <li>Está respaldada por una amplia experiencia y un historial de casos exitosos</li>
+                <li>Se enfoca en soluciones personalizadas para cada caso, garantizando que tus necesidades específicas se cumplan</li>
+                <li>Brinda asesoramiento claro y efectivo, asegurando que entiendas cada paso del proceso legal</li>
+                <li>Te representa con integridad, luchando por tus derechos y por una compensación justa</li>
+              </ul>
+            <p className='text-black'>Confía en nosotros para obtener los resultados que necesitas.</p>
+
       </div>
     </div>
     </div>

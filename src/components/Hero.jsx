@@ -10,19 +10,20 @@ const Hero = () => {
     }, 90);
   };
   return (
-    <div className='text-black' id='principal'>
+    <div className='text-black m-2' id='principal'>
       <div className='max-w-[800px]  mt-[-0px] w-auto h-screen mx-auto text-center flex flex-col justify-center'>
-        <p className='text-[#ffbf00] font-bold'>Expertos en accidentes de tráfico y reclamaciones legales.</p>
-        <h2 className='md:text-6xl sm:text-5xl text-4xl font-sans font-bold my-2'>Compensación justa para tus reclamaciones.</h2>
-        <p className='font-serif italic my-2'>Protege tus derechos y brinda tranquilidad en momentos de urgencia.</p>
-        <div className='flex justify-center'>
+        <h2 className='text-[#ffbf00] md:text-6xl sm:text-5xl text-4xl font-sans font-bold my-2'>Luchamos por una justa indemnización en tus casos legales</h2>
+        <p className='font-bold my-2'>Expertos en accidentes de tráfico y litigios, comprometidos a lograr los mejores resultados para ti</p>
+
+        <div className='flex justify-center md:col-2 col-1 m-2 items-center'>
           <button
             className='bg-[#ffbf00] w-[200px] rounded-md font-medium my-2 py-3 text-white'
             onClick={handleClick}
             style={{ opacity }}
           >
-            Contactanos
+            Consultanso ya
           </button>
+          <p className= "text-left p-2" >Te respaldamos en cada paso</p>
         </div>
       </div>
     </div>
