@@ -21,21 +21,9 @@ const Navbar = () => {
     { name: "Servicios", to: "#servicios" },
     { name: "Asesoramiento", to: "#asesoramiento" },
     { name: "Contacto", to: "#contacto" },
-  ];d
+  ];
 
-  useEffect(() => {
-    let prevScrollPos = window.pageYOffset;
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      const visible = prevScrollPos > currentScrollPos || currentScrollPos === 0;
-      setNavVisible(visible);
-      prevScrollPos = currentScrollPos;
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+
 
   const scrollToSection = (id) => {
     const section = document.querySelector(id);
