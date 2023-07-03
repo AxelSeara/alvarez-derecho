@@ -7,8 +7,13 @@ const Hero = () => {
     setOpacity(0.7);
     setTimeout(() => {
       setOpacity(1);
+      const contactoDiv = document.getElementById('contacto');
+      if (contactoDiv) {
+        contactoDiv.scrollIntoView({ behavior: 'smooth' });
+      }
     }, 90);
   };
+
   return (
     <div className='text-black m-2' id='principal'>
       <div className='max-w-[800px]  mt-[-0px] w-auto h-screen mx-auto text-center flex flex-col justify-center'>
@@ -16,13 +21,14 @@ const Hero = () => {
         <p className='font-bold my-2'>Expertos en accidentes de tráfico y litigios, comprometidos a lograr los mejores resultados para ti</p>
 
         <div className='flex justify-center md:col-2 col-1 m-2 items-center'>
-          <button
-            className='bg-[#ffbf00] w-[200px] rounded-md font-medium my-2 py-3 text-white'
+            <button
+            className="bg-[#ffbf00] w-[200px] rounded-md font-medium my-2 py-3 text-white"
             onClick={handleClick}
             style={{ opacity }}
-          >
+            >
             Consultanso ya
-          </button>
+            </button>
+
           <p className= "text-left p-2" >Te respaldamos en cada paso</p>
         </div>
       </div>

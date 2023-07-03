@@ -3,7 +3,7 @@ import Road from '../assets/road.jpg';
 
 const Specialist = () => {
   return (
-    <div className='w-full py-10 px-4' id='servicios'>
+    <div className='w-full py-10 px-4' id='asesoramiento'>
       <div className='max-w-[1280px] mx-auto grid md:grid-cols-2'>
       <img className="w-[400px] mx-auto my-4 rounded-md shadow-sm" src={Road} alt="/" />
       <div className='flex flex-col justify-center'>

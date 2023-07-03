@@ -40,7 +40,7 @@ const Navbar = () => {
   const scrollToSection = (id) => {
     const section = document.querySelector(id);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
       closeNav();
     }
   };
@@ -52,9 +52,7 @@ const Navbar = () => {
         <ul className="hidden md:flex">
           {links.map((link, index) => (
             <li key={index} className="p-3 hover:scale-105 duration-200">
-              <a href={link.to} onClick={() => scrollToSection(link.to)}>
-                {link.name}
-              </a>
+              <span onClick={() => scrollToSection(link.to)}>{link.name}</span>
             </li>
           ))}
         </ul>
@@ -67,9 +65,7 @@ const Navbar = () => {
           <ul className="pt-12 uppercase">
             {links.map((link, index) => (
               <li key={index} className="p-3">
-                <a href={link.to} onClick={() => scrollToSection(link.to)}>
-                  {link.name}
-                </a>
+                <span onClick={() => scrollToSection(link.to)}>{link.name}</span>
               </li>
             ))}
           </ul>
