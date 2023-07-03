@@ -4,7 +4,6 @@ import { CSSTransition } from "react-transition-group";
 import "./Navbar.css"; // CSS for animation
 
 const Navbar = () => {
-  const [navVisible, setNavVisible] = useState(true);
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
