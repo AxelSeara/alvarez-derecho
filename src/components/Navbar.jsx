@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { CSSTransition } from "react-transition-group";
 import "./Navbar.css"; // CSS for animation
