@@ -21,7 +21,7 @@ const Navbar = () => {
     { name: "Servicios", to: "#servicios" },
     { name: "Asesoramiento", to: "#asesoramiento" },
     { name: "Contacto", to: "#contacto" },
-  ];
+  ];d
 
   useEffect(() => {
     let prevScrollPos = window.pageYOffset;
@@ -48,11 +48,11 @@ const Navbar = () => {
   return (
     <div className="text-black fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4">
-        <h1 className="w-full font-sans font-bold text-2xl text-[#ffbf00]">Alvarez Derecho</h1>
+        <h1 className="w-full font-sans font-bold text-2xl text-[#ffbf00]">Álvarez Derecho</h1>
         <ul className="hidden md:flex">
           {links.map((link, index) => (
             <li key={index} className="p-3 hover:scale-105 duration-200">
-              <span onClick={() => scrollToSection(link.to)}>{link.name}</span>
+              <span className="navbar-item"  onClick={() => scrollToSection(link.to)}>{link.name}</span>
             </li>
           ))}
         </ul>

@@ -19,3 +19,6 @@
   transform: translateX(-100%);
   transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
 }
+.navbar-item {
+  cursor: pointer;
+}
