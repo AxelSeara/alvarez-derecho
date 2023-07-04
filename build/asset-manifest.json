@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/alvarez-derecho/static/css/main.aaee910f.css",
+    "main.js": "/alvarez-derecho/static/js/main.965646ce.js",
+    "static/media/road.jpg": "/alvarez-derecho/static/media/road.e3e9177f3cc6114e85c1.jpg",
+    "index.html": "/alvarez-derecho/index.html",
+    "main.aaee910f.css.map": "/alvarez-derecho/static/css/main.aaee910f.css.map",
+    "main.965646ce.js.map": "/alvarez-derecho/static/js/main.965646ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aaee910f.css",
+    "static/js/main.965646ce.js"
+  ]
+}
