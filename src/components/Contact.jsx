@@ -2,13 +2,13 @@ import React from 'react';
 
 const Contact = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = '+34649538759';
+    const phoneNumber = '+34639303038';
     const whatsappLink = `https://wa.me/${phoneNumber}`;
     window.open(whatsappLink);
   };
 
   const handleContactClick = () => {
-    const email = 'tudireccion@gmail.com';
+    const email = 'info@despachoalvarez.es';
     const subject = encodeURIComponent('Asunto de contacto');
     const body = encodeURIComponent('Descripción del mensaje');
 
@@ -24,7 +24,7 @@ const Contact = () => {
             Necesitas asesoramiento, contáctanos
           </h1>
           <p>
-            Algún texto interesante aquí...
+          Estamos listos para ayudarte en tu caso legal
           </p>
         </div>
         <div className='my-4 flex items-center'>
