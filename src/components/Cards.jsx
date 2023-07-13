@@ -1,7 +1,6 @@
 import React from 'react';
 import Law from "../assets/law.png";
 import Car from "../assets/car.png";
-import Work from "../assets/work.png";
 import Int from  "../assets/intelectual.png";
 
 function Cards() {
@@ -27,7 +26,7 @@ sufridas y en caso negativo llevamos el caso a los tribunales.</p>
             <img className="w-20 mx-auto mt-[-3rem] bg-whitesmoke" src={Car} alt="/" />
             <h2 className='text-2xl font-bold text-center py-8'>Accidentes de coche, moto, camión, barco. Accidentes en vía pública, transporte
 público.</h2>
-             <p className='text-center text-4xl font-bold'>Accidentes de <br />tráfico</p>
+              <p className='text-center text-4xl font-bold'>Accidentes de <br />tráfico</p>
               <div className='text-center font-medium'>
                 <p className='py-2 border-b mx-8 mt-8'>Evidencia: reúne toda la evidencia relevante que respalde tu reclamación, toda la
 documentación que demuestre los hechos</p>

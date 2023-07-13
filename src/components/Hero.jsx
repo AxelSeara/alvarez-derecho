@@ -26,7 +26,7 @@ const Hero = () => {
             onClick={handleClick}
             style={{ opacity }}
             >
-            Consultanso ya
+            Consultanos ya
             </button>
 
           <p className= "text-left p-2" >Te respaldamos en cada paso</p>

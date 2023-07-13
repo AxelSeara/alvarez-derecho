@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 
 const Footer = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -87,7 +87,7 @@ const Footer = () => {
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
                         AVISO LEGAL
-El acceso a la presente página Web http://despachoalvarez.es supone la
+El acceso a la presente página Web  https://despachoalvarez.es supone la
 adquisición de la condición de usuario y la aceptación de éste del total de las
 condiciones y disposiciones establecidas en el presente Aviso Legal.
 Legislación
