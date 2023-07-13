@@ -1,0 +1,7 @@
+
+> alvarez-despacho@0.1.0 dev
+> next dev
+
+- ready started server on 0.0.0.0:3001, url: http://localhost:3001
+- [35mevent[39m compiled client and server successfully in 304 ms (18 modules)
+[?25h
