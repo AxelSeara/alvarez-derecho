@@ -16,7 +16,7 @@ const Hero = () => {
 
   return (
     <div className='text-black m-2' id='principal'>
-      <div className='max-w-[800px]  mt-[-0px] w-auto h-screen mx-auto text-center flex flex-col justify-center'>
+      <div className='max-w-[800px]  mt-[100px] w-auto h-[50vh] mx-auto text-center flex flex-col justify-center'>
         <h2 className='text-[#ffbf00] md:text-6xl sm:text-5xl text-4xl font-sans font-bold my-2'>Luchamos por una justa indemnización en tus casos legales</h2>
         <p className='font-bold my-2'>Expertos en accidentes de tráfico y litigios, comprometidos a lograr los mejores resultados para ti</p>
 

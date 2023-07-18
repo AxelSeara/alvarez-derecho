@@ -6,18 +6,7 @@ import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const [currentPath, setCurrentPath] = useState("");
   const router = useRouter();
-
-  useEffect(() => {
-    setCurrentPath(router.pathname);
-  }, [router.pathname]);
-
-  useEffect(() => {
-    if (currentPath.startsWith("/blog")) {
-      closeNav();
-    }
-  }, [currentPath]);
 
   const handleNav = () => {
     setNav(!nav);
@@ -28,10 +17,10 @@ const Navbar = () => {
   };
 
   const links = [
-    { name: "Principal", to: "#principal" },
-    { name: "Servicios", to: "#servicios" },
-    { name: "Asesoramiento", to: "#asesoramiento" },
-    { name: "Contacto", to: "#contacto" },
+    { name: "Principal", to: "/#principal" },
+    { name: "Servicios", to: "/#servicios" },
+    { name: "Asesoramiento", to: "/#asesoramiento" },
+    { name: "Contacto", to: "/#contacto" },
     { name: "Blog", to: "/blog" },
   ];
 
@@ -44,8 +33,33 @@ const Navbar = () => {
           </Link>
         </h1>
         <ul className="hidden md:flex">
-          {links.map((link, index) =>
-            (!currentPath.startsWith("/blog") || link.name === "Blog") ? (
+          {links.map((link, index) => (
+            <li
+              key={index}
+              className={`p-3 transition-all duration-300 ${
+                link.name === "Blog"
+                  ? "text-[#ffbf00] font-bold"
+                  : ""
+              }`}
+            >
+              {link.name === "Blog" ? (
+                <Link href={link.to} legacyBehavior>
+                  <a>{link.name}</a>
+                </Link>
+              ) : (
+                <a href={link.to}>{link.name}</a>
+              )}
+            </li>
+          ))}
+        </ul>
+        <div onClick={handleNav} className="block md:hidden">
+          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        </div>
+      </div>
+      <CSSTransition in={nav} timeout={300} classNames="slide" unmountOnExit>
+        <div className="bg-white fixed left-0 top-0 w-[60%] h-full border-r">
+          <ul className="pt-12 uppercase">
+            {links.map((link, index) => (
               <li
                 key={index}
                 className={`p-3 transition-all duration-300 ${
@@ -62,36 +76,7 @@ const Navbar = () => {
                   <a href={link.to}>{link.name}</a>
                 )}
               </li>
-            ) : null
-          )}
-        </ul>
-        <div onClick={handleNav} className="block md:hidden">
-          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
-        </div>
-      </div>
-      <CSSTransition in={nav} timeout={300} classNames="slide" unmountOnExit>
-        <div className="bg-white fixed left-0 top-0 w-[60%] h-full border-r">
-          <ul className="pt-12 uppercase">
-            {links.map((link, index) =>
-              (!currentPath.startsWith("/blog") || link.name === "Blog") ? (
-                <li
-                  key={index}
-                  className={`p-3 transition-all duration-300 ${
-                    link.name === "Blog"
-                      ? "text-[#ffbf00] font-bold"
-                      : ""
-                  }`}
-                >
-                  {link.name === "Blog" ? (
-                    <Link href={link.to} legacyBehavior>
-                      <a>{link.name}</a>
-                    </Link>
-                  ) : (
-                    <a href={link.to}>{link.name}</a>
-                  )}
-                </li>
-              ) : null
-            )}
+            ))}
           </ul>
         </div>
       </CSSTransition>
