@@ -5,6 +5,11 @@ const Contact = () => {
     const phoneNumber = '+34649538759';
     const whatsappLink = `https://wa.me/${phoneNumber}`;
     window.open(whatsappLink);
+
+    // Envía el evento de clic de WhatsApp a Google Analytics si está disponible
+    if (typeof window !== 'undefined' && typeof window.ga === 'function') {
+      window.ga('send', 'event', 'Contact', 'WhatsApp Click');
+    }
   };
 
   const handleContactClick = () => {
@@ -14,10 +19,15 @@ const Contact = () => {
 
     const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
     window.open(mailtoLink);
+
+    // Envía el evento de clic de contacto a Google Analytics si está disponible
+    if (typeof window !== 'undefined' && typeof window.ga === 'function') {
+      window.ga('send', 'event', 'Contact', 'Contact Click');
+    }
   };
 
   return (
-    <div className='w-full py-16 text-black px-4 m-2  ' id='contacto' >
+    <div className='w-full py-16 text-black px-4 m-2' id='contacto'>
       <div className='max-w-[1240px] mx-auto grid lg:grid-cols-3'>
         <div className='lg:col-span-2 my-4'>
           <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>
