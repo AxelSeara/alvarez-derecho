@@ -34,7 +34,7 @@ const Contact = () => {
             Necesitas asesoramiento, contáctanos
           </h1>
           <p>
-            Algún texto interesante aquí...
+          Tu tranquilidad es nuestra prioridad. Hablemos de tus necesidades legales, Contáctanos hoy.
           </p>
         </div>
         <div className='my-4 flex items-center'>
