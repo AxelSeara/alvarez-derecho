@@ -4,22 +4,38 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import { html } from 'remark-html';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
-const Post = ({ title, date, content }) => {
+function Post({ title, date, description, content, image }) {
   return (
     <div>
-      <h1>{title}</h1>
-      <p>{date}</p>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <Navbar />
+      <div className=" w-screen overflow-hidden">
+        <img className="w-full max-h-[400px] object-cover" src={image} alt={title} />
+      </div>
+      <div className="max-w-[1240px] mx-auto py-10 px-4">
+        <h1 className="text-4xl font-bold mb-4">{title}</h1>
+        <h2 className="text-2xl font-bold mb-4">{description}</h2>
+        <p className="text-gray-500 mb-8">{date}</p>
+        <div className="content" dangerouslySetInnerHTML={{ __html: content }} />
+      </div>
+      <Footer />
+
+      <style jsx>{`
+        .content {
+          margin-top: 1rem; // Ajusta el valor según tus necesidades
+        }
+      `}</style>
     </div>
   );
-};
+}
 
 export async function getStaticPaths() {
   const postsDirectory = path.join(process.cwd(), 'posts');
   const filenames = fs.readdirSync(postsDirectory);
 
-  const paths = filenames.map(filename => ({
+  const paths = filenames.map((filename) => ({
     params: { slug: filename.replace(/\.md$/, '') },
   }));
 
@@ -41,6 +57,9 @@ export async function getStaticProps({ params }) {
       title: data.title,
       date: data.date,
       content: contentHtml,
+      image: data.image,
+      description: data.description,
+
     },
   };
 }
