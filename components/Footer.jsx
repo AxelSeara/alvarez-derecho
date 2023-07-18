@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaInstagram, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 import Link from "next/link";
 
+
 const Footer = () => {
   const [legalModalOpen, setLegalModalOpen] = useState(false);
   const [imageModalOpen, setImageModalOpen] = useState(false);
@@ -180,7 +181,8 @@ Atribución de derechos de las imagenes usadas para los contenidos de esta web. 
                     <p className="text-sm text-gray-500">
 Publicación Laboral 1      <a href="https://www.freepik.es/foto-gratis/concepto-negocio-automoviles-venta-automoviles-consumo-personas_9144933.htm#query=conductor&position=0&from_view=search&track=sph">
     Imagen de standret en Freepik
-  </a>                </p>
+  </a>
+Ilustracion landing page <a href="https://www.freepik.es/vector-gratis/sentencia-legal-aviso-judicial-decision-juez-sistema-judicial-abogado-abogado-estudiando-papeles-personaje-dibujos-animados-deuda-hipotecaria-legislacion_12146017.htm#query=legal%20ilustracion&position=13&from_view=search&track=ais">Imagen de vectorjuice</a> en Freepik            </p>
                   </div>
                 </div>
               </div>
