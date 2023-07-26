@@ -2,27 +2,33 @@ import React from 'react';
 
 const Contact = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = '+34649538759';
+    const phoneNumber = '+34639303038';
     const whatsappLink = `https://wa.me/${phoneNumber}`;
     window.open(whatsappLink);
 
     // Envía el evento de clic de WhatsApp a Google Analytics si está disponible
-    if (typeof window !== 'undefined' && typeof window.ga === 'function') {
-      window.ga('send', 'event', 'Contact', 'WhatsApp Click');
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'whatsapp_click', {
+        'event_category': 'contact',
+        'event_label': phoneNumber,
+      });
     }
   };
 
   const handleContactClick = () => {
-    const email = 'tudireccion@gmail.com';
+    const email = 'info@despachoalvarez.es';
     const subject = encodeURIComponent('Asunto de contacto');
-    const body = encodeURIComponent('Descripción del mensaje');
+    const body = encodeURIComponent('Tu consulta');
 
     const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
     window.open(mailtoLink);
 
     // Envía el evento de clic de contacto a Google Analytics si está disponible
-    if (typeof window !== 'undefined' && typeof window.ga === 'function') {
-      window.ga('send', 'event', 'Contact', 'Contact Click');
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'contact_click', {
+        'event_category': 'contact',
+        'event_label': email,
+      });
     }
   };
 

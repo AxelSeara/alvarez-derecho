@@ -5,7 +5,7 @@ exports.id = 405;
 exports.ids = [405,660];
 exports.modules = {
 
-/***/ 2445:
+/***/ 4973:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -58,9 +58,9 @@ var external_path_default = /*#__PURE__*/__webpack_require__.n(external_path_);
 // EXTERNAL MODULE: external "gray-matter"
 var external_gray_matter_ = __webpack_require__(8076);
 var external_gray_matter_default = /*#__PURE__*/__webpack_require__.n(external_gray_matter_);
-;// CONCATENATED MODULE: external "next/head"
-const head_namespaceObject = require("next/head");
-var head_default = /*#__PURE__*/__webpack_require__.n(head_namespaceObject);
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__(968);
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
 // EXTERNAL MODULE: ./components/Navbar.jsx
 var Navbar = __webpack_require__(1788);
 ;// CONCATENATED MODULE: ./components/Hero.jsx
@@ -181,16 +181,16 @@ const Specialist = ()=>{
 
 const Contact = ()=>{
     const handleWhatsAppClick = ()=>{
-        const phoneNumber = "+34649538759";
+        const phoneNumber = "+34639303038";
         const whatsappLink = `https://wa.me/${phoneNumber}`;
         window.open(whatsappLink);
         // Envía el evento de clic de WhatsApp a Google Analytics si está disponible
         if (false) {}
     };
     const handleContactClick = ()=>{
-        const email = "tudireccion@gmail.com";
+        const email = "info@despachoalvarez.es";
         const subject = encodeURIComponent("Asunto de contacto");
-        const body = encodeURIComponent("Descripci\xf3n del mensaje");
+        const body = encodeURIComponent("Tu consulta");
         const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
         window.open(mailtoLink);
         // Envía el evento de clic de contacto a Google Analytics si está disponible
@@ -210,7 +210,7 @@ const Contact = ()=>{
                             children: "Necesitas asesoramiento, cont\xe1ctanos"
                         }),
                         /*#__PURE__*/ jsx_runtime.jsx("p", {
-                            children: "Alg\xfan texto interesante aqu\xed..."
+                            children: "Tu tranquilidad es nuestra prioridad. Hablemos de tus necesidades legales, Cont\xe1ctanos hoy."
                         })
                     ]
                 }),
@@ -658,6 +658,13 @@ module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
+/***/ 968:
+/***/ ((module) => {
+
+module.exports = require("next/head");
+
+/***/ }),
+
 /***/ 1853:
 /***/ ((module) => {
 
@@ -714,7 +721,7 @@ module.exports = require("path");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [940,812,664,95], () => (__webpack_exec__(2445)));
+var __webpack_exports__ = __webpack_require__.X(0, [940,812,664,95], () => (__webpack_exec__(4973)));
 module.exports = __webpack_exports__;
 
 })();

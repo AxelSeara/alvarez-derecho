@@ -6,13 +6,30 @@ import { remark } from 'remark';
 import { html } from 'remark-html';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import Head from 'next/head';
 
-function Post({ title, date, description, content, image }) {
+function Post({ title, date, description, content, image, slug }) {
+  const postURL = `https://despachoalvarez.es/blog/${slug}`; // Ahora estamos usando tu dominio real
+  const imageURL = `https://despachoalvarez.es${image}`; // Asegúrate que la ruta de la imagen es correcta
+
   return (
     <div>
+      <Head>
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={imageURL} />
+        <meta property="og:url" content={postURL} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="despachoalvarez.es" />
+        <meta property="twitter:url" content={postURL} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={imageURL} />
+      </Head>
       <Navbar />
       <div className=" w-screen overflow-hidden">
-        <img className="w-full max-h-[400px] object-cover" src={image} alt={title} />
+        <img className="w-full max-h-[400px] object-cover" src={imageURL} alt={title} />
       </div>
       <div className="max-w-[1240px] mx-auto py-10 px-4">
         <h1 className="text-4xl font-bold mb-4">{title}</h1>
@@ -59,7 +76,7 @@ export async function getStaticProps({ params }) {
       content: contentHtml,
       image: data.image,
       description: data.description,
-
+      slug: params.slug,
     },
   };
 }

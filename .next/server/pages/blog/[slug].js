@@ -106,6 +106,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var remark_html__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7740);
 /* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(1788);
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(6082);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(968);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_10__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([remark__WEBPACK_IMPORTED_MODULE_6__, remark_html__WEBPACK_IMPORTED_MODULE_7__]);
 ([remark__WEBPACK_IMPORTED_MODULE_6__, remark_html__WEBPACK_IMPORTED_MODULE_7__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
@@ -118,15 +120,76 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([rema
 
 
 
-function Post({ title, date, description, content, image }) {
+
+function Post({ title, date, description, content, image, slug }) {
+    const postURL = `https://despachoalvarez.es/blog/${slug}`; // Ahora estamos usando tu dominio real
+    const imageURL = `https://despachoalvarez.es${image}`; // Asegúrate que la ruta de la imagen es correcta
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         className: "jsx-e31a9115b6a2f303",
         children: [
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_10___default()), {
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
+                        className: "jsx-e31a9115b6a2f303",
+                        children: title
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        property: "og:title",
+                        content: title,
+                        className: "jsx-e31a9115b6a2f303"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        property: "og:description",
+                        content: description,
+                        className: "jsx-e31a9115b6a2f303"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        property: "og:image",
+                        content: imageURL,
+                        className: "jsx-e31a9115b6a2f303"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        property: "og:url",
+                        content: postURL,
+                        className: "jsx-e31a9115b6a2f303"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        name: "twitter:card",
+                        content: "summary_large_image",
+                        className: "jsx-e31a9115b6a2f303"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        property: "twitter:domain",
+                        content: "despachoalvarez.es",
+                        className: "jsx-e31a9115b6a2f303"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        property: "twitter:url",
+                        content: postURL,
+                        className: "jsx-e31a9115b6a2f303"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        name: "twitter:title",
+                        content: title,
+                        className: "jsx-e31a9115b6a2f303"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        name: "twitter:description",
+                        content: description,
+                        className: "jsx-e31a9115b6a2f303"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                        name: "twitter:image",
+                        content: imageURL,
+                        className: "jsx-e31a9115b6a2f303"
+                    })
+                ]
+            }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .Z, {}),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 className: "jsx-e31a9115b6a2f303" + " " + " w-screen overflow-hidden",
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                    src: image,
+                    src: imageURL,
                     alt: title,
                     className: "jsx-e31a9115b6a2f303" + " " + "w-full max-h-[400px] object-cover"
                 })
@@ -188,7 +251,8 @@ async function getStaticProps({ params }) {
             date: data.date,
             content: contentHtml,
             image: data.image,
-            description: data.description
+            description: data.description,
+            slug: params.slug
         }
     };
 }
@@ -322,6 +386,13 @@ module.exports = require("next/dist/shared/lib/router/utils/resolve-href.js");
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 968:
+/***/ ((module) => {
+
+module.exports = require("next/head");
 
 /***/ }),
 
