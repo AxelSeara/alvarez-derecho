@@ -1,6 +1,6 @@
 function Cards() {
   return (
-    <div className="w-full py-20 px-4  bg-customYellow " id='servicios'>
+<div className="w-full py-20 px-4" style={{ background: 'linear-gradient(to bottom, #ffbf00, #ffffff)' }} id='servicios'>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8'>
         <div className=' bg-white w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
           <img className="w-20 mx-auto mt-[-3rem] bg-whitesmoke" src="/assets/law.png" alt="/" />
