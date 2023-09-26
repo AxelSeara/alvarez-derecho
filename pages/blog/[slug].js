@@ -28,7 +28,7 @@ function Post({ title, date, description, content, image, slug }) {
         <meta name="twitter:image" content={imageURL} />
       </Head>
       <Navbar />
-      <div className=" w-screen overflow-hidden">
+      <div className=" w-screen overflow-hidden mt-24">
         <img className="w-full max-h-[400px] object-cover" src={imageURL} alt={title} />
       </div>
       <div className="max-w-[1240px] mx-auto py-10 px-4">

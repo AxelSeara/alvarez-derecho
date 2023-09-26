@@ -11,7 +11,7 @@ const Blog = ({ posts }) => {
     <div>
       <Navbar />
 
-      <div className="w-full py-10 px-4 mt-16"> {/* Agrega la clase mt-16 para un margen superior */}
+      <div className="w-full py-10 px-4 mt-16">
         <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8">
           {posts.map((post) => (
             <div
@@ -56,7 +56,7 @@ export async function getStaticProps() {
       title: data.title,
       description: data.description,
       slug: filename.replace(/\.md$/, ''),
-      image: data.image, // Ruta de la imagen en tu archivo Markdown
+      image: data.image,
     };
   });
 
