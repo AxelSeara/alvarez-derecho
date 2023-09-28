@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.14",
+    "eslint-config-react-app": "^7.0.1",
     "globby": "^10.0.2",
     "gray-matter": "^4.0.3",
     "next": "^13.5.3",
@@ -24,10 +25,10 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node ./sitemap ",
+    "build": "next build && node ./sitemap.js",
     "start": "next start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d .next",
+    "predeploy": "npm run build && next export",
+    "deploy": "gh-pages -d out",
     "test": "jest",
     "eject": "react-scripts eject"
   },

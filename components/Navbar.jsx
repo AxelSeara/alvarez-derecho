@@ -56,29 +56,23 @@ const Navbar = () => {
     <div className={`text-black fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'opacity-0'}`}>
       <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4">
         <h1 className="w-full font-sans font-bold text-2xl text-[#ffbf00]">
-          <Link href="/" legacyBehavior>
-            <a>Álvarez Derecho</a>
-          </Link>
+          <Link href="/">Álvarez Derecho</Link>
         </h1>
         <ul className="hidden md:flex">
           {links.map((link, index) => (
-            <li
-              key={index}
-              className={`p-3 transition-all duration-300 cursor-pointer ${link.name === "Blog" ? "text-[#ffbf00] font-bold" : ""}`}
-            >
-              <a href={link.to} onClick={(e) => {
-                  if (link.to.startsWith("/#")) {
-                    e.preventDefault();
-                    closeNav();
-                    const id = link.to.substring(2);
-                    navigateToSection(id);
-                  } else {
-                    router.push(link.to);
-                  }
-                }}
-              >
+            <li key={index} className={`p-3 transition-all duration-300 cursor-pointer ${link.name === "Blog" ? "text-[#ffbf00] font-bold" : ""}`}>
+              <Link href={link.to} onClick={(e) => {
+                if (link.to.startsWith("/#")) {
+                  e.preventDefault();
+                  closeNav();
+                  const id = link.to.substring(2);
+                  navigateToSection(id);
+                } else {
+                  router.push(link.to);
+                }
+              }}>
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -90,23 +84,19 @@ const Navbar = () => {
         <div className="bg-white fixed left-0 top-0 w-[60%] h-full border-r">
           <ul className="pt-12 uppercase">
             {links.map((link, index) => (
-              <li
-                key={index}
-                className={`p-3 transition-all duration-300 cursor-pointer ${link.name === "Blog" ? "text-[#ffbf00] font-bold" : ""}`}
-              >
-                <a href={link.to} onClick={(e) => {
-                    if (link.to.startsWith("/#")) {
-                      e.preventDefault();
-                      closeNav();
-                      const id = link.to.substring(2);
-                      navigateToSection(id);
-                    } else {
-                      router.push(link.to);
-                    }
-                  }}
-                >
+              <li key={index} className={`p-3 transition-all duration-300 cursor-pointer ${link.name === "Blog" ? "text-[#ffbf00] font-bold" : ""}`}>
+                <Link href={link.to} onClick={(e) => {
+                  if (link.to.startsWith("/#")) {
+                    e.preventDefault();
+                    closeNav();
+                    const id = link.to.substring(2);
+                    navigateToSection(id);
+                  } else {
+                    router.push(link.to);
+                  }
+                }}>
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
